@@ -1,0 +1,31 @@
+{
+  "name": "morris-darren-babu-portfolio",
+  "version": "1.0.0",
+  "description": "Advanced AI/ML Research Portfolio Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000",
+    "build": "npm run optimize && npm run minify",
+    "optimize": "imagemin images/**/* --out-dir=dist/images",
+    "minify": "html-minifier index.html --output dist/index.html --minify-css --minify-js",
+    "test": "lighthouse --view --output-path=./lighthouse-report.html https://darren-2000.github.io",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [
+    "portfolio",
+    "ai",
+    "machine-learning",
+    "automotive",
+    "research",
+    "data-science"
+  ],
+  "author": "Morris Darren Babu",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^4.0.0",
+    "html-minifier": "^4.0.0",
+    "imagemin": "^8.0.1",
+    "lighthouse": "^10.0.0",
+    "live-server": "^1.2.2"
+  }
+}
