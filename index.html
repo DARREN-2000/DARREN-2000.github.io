@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morris Darren Babu - AI/ML Research Specialist</title>
+    <meta name="description" content="Morris Darren Babu - AI/ML Research Specialist specializing in Automotive AI, LLMs, and Data Science. Currently at Volkswagen Group (CARIAD).">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+    <!-- GSAP Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Three.js for 3D effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Typed.js for typing animation -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <!-- AOS Animation on Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="neural-network">
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="connection"></div>
+                <div class="connection"></div>
+                <div class="connection"></div>
+            </div>
+            <p>Loading AI Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">
+                    <span class="logo-text">Morris</span>
+                    <span class="logo-ai">AI</span>
+                </a>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#research" class="nav-link">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#publications" class="nav-link">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-up">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Morris Darren Babu</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span id="typed-text"></span>
+                </div>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+                    AI/ML Research Specialist revolutionizing automotive intelligence through cutting-edge research at Volkswagen Group (CARIAD). Transforming complex data into intelligent, actionable solutions.
+                </p>
+                
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+                    <div class="stat">
+                        <div class="stat-number" data-count="13">0</div>
+                        <div class="stat-label">% Security Detection Boost</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="12">0</div>
+                        <div class="stat-label">% Diagnostic Precision</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="25">0</div>
+                        <div class="stat-label">% ETL Pipeline Speed</div>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="700">
+                    <a href="#research" class="btn btn-primary">
+                        <i class="fas fa-flask"></i>
+                        Explore Research
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i>
+                        Get In Touch
+                    </a>
+                    <a href="https://linkedin.com/in/morrisdarrenbabu" target="_blank" class="btn btn-linkedin">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual" data-aos="fade-left">
+                <div class="floating-elements">
+                    <div class="floating-card ai-card">
+                        <i class="fas fa-brain"></i>
+                        <span>Deep Learning</span>
+                    </div>
+                    <div class="floating-card auto-card">
+                        <i class="fas fa-car"></i>
+                        <span>Automotive AI</span>
+                    </div>
+                    <div class="floating-card ml-card">
+                        <i class="fas fa-robot"></i>
+                        <span>Machine Learning</span>
+                    </div>
+                </div>
+                <div class="hero-3d-container" id="hero-3d"></div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about leveraging cutting-edge AI to solve real-world automotive challenges</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <div class="about-intro">
+                        <h3>AI Research Specialist</h3>
+                        <p>I'm currently pursuing my Master's thesis at <strong>Volkswagen Group (CARIAD)</strong>, focusing on integrating Large Language Models in automotive CI/CD/CT pipelines. My research explores AI-enhanced security testing and intelligent automation frameworks.</p>
+                        
+                        <p>With experience at <strong>BMW Group</strong> and expertise in generative AI, computer vision, and automotive security, I transform complex technical challenges into innovative solutions.</p>
+                    </div>
+                    
+                    <div class="credentials">
+                        <div class="credential">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>M.Sc. Data Science</h4>
+                                <p>Friedrich Alexander University Erlangen-Nuremberg</p>
+                            </div>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Nürnberg, Bavaria, Germany</p>
+                            </div>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>morrisdarren357@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-skills" data-aos="fade-left">
+                    <div class="skills-container">
+                        <h3>Technical Expertise</h3>
+                        
+                        <div class="skill-category">
+                            <h4><i class="fas fa-brain"></i> AI & Machine Learning</h4>
+                            <div class="skills-grid">
+                                <div class="skill-item">TensorFlow</div>
+                                <div class="skill-item">PyTorch</div>
+                                <div class="skill-item">Scikit-learn</div>
+                                <div class="skill-item">LangChain</div>
+                                <div class="skill-item">OpenAI GPT</div>
+                                <div class="skill-item">Computer Vision</div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4><i class="fas fa-cloud"></i> Cloud & DevOps</h4>
+                            <div class="skills-grid">
+                                <div class="skill-item">AWS</div>
+                                <div class="skill-item">Azure</div>
+                                <div class="skill-item">Docker</div>
+                                <div class="skill-item">Kubernetes</div>
+                                <div class="skill-item">Jenkins</div>
+                                <div class="skill-item">Git</div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4><i class="fas fa-code"></i> Programming</h4>
+                            <div class="skills-grid">
+                                <div class="skill-item">Python</div>
+                                <div class="skill-item">R</div>
+                                <div class="skill-item">C++</div>
+                                <div class="skill-item">JavaScript</div>
+                                <div class="skill-item">SQL</div>
+                                <div class="skill-item">VBA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section bg-secondary">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Current Research</h2>
+                <p class="section-subtitle">AI Usage in CI/CD/CT Pipelines for Automotive Compute Platforms</p>
+            </div>
+            
+            <div class="research-content">
+                <div class="research-overview" data-aos="fade-up">
+                    <div class="research-card">
+                        <div class="research-header">
+                            <div class="research-logo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/1200px-Volkswagen_logo_2019.svg.png" alt="Volkswagen CARIAD">
+                            </div>
+                            <div class="research-info">
+                                <h3>Master Thesis Research</h3>
+                                <p><strong>Volkswagen Group (CARIAD)</strong></p>
+                                <p class="research-date">April 2025 - September 2025</p>
+                            </div>
+                        </div>
+                        
+                        <div class="research-description">
+                            <p>Groundbreaking research exploring AI-enhanced security testing within automotive CI/CD/CT pipelines, focusing on Whitebox fuzzing augmented by Large Language Models.</p>
+                        </div>
+                        
+                        <div class="research-objectives">
+                            <h4>Key Research Objectives</h4>
+                            <ul>
+                                <li><i class="fas fa-brain"></i> AI-Enhanced Whitebox Fuzzing</li>
+                                <li><i class="fas fa-sync"></i> Intelligent CI/CD/CT Pipelines</li>
+                                <li><i class="fas fa-robot"></i> Automated Test Artifact Generation</li>
+                                <li><i class="fas fa-shield-alt"></i> Realistic Mock Scenario Creation</li>
+                                <li><i class="fas fa-chart-line"></i> Comprehensive Performance Analysis</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="research-impact">
+                            <h4>Research Impact</h4>
+                            <div class="impact-metrics">
+                                <div class="metric">
+                                    <div class="metric-value">+7%</div>
+                                    <div class="metric-label">Test Coverage Boost</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">+13%</div>
+                                    <div class="metric-label">Security Detection</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">-4%</div>
+                                    <div class="metric-label">Execution Delays</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">Journey through leading automotive and technology companies</p>
+            </div>
+            
+            <div class="timeline">
+                <!-- BMW Group Experience -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <div class="company-logo">
+                                    <img src="https://logos-world.net/wp-content/uploads/2020/08/BMW-Logo.png" alt="BMW Group">
+                                </div>
+                                <div class="experience-info">
+                                    <h3>Data Science Intern (AI/ML & LLMs)</h3>
+                                    <h4>BMW Group</h4>
+                                    <p class="location"><i class="fas fa-map-marker-alt"></i> Munich, Germany</p>
+                                    <p class="duration"><i class="fas fa-calendar"></i> October 2024 - March 2025</p>
+                                </div>
+                            </div>
+                            
+                            <div class="experience-description">
+                                <ul>
+                                    <li>Architected an auto-suggestion model using RAG to identify part issues via text/image inputs, increasing diagnostic precision by 12%</li>
+                                    <li>Deployed surface detection model on AWS SageMaker with EC2 & S3, using semantic segmentation and adaptive FP rectification</li>
+                                    <li>Designed LLM optimization through hyperparameter fine-tuning, delivering 8% faster processing</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="experience-tech">
+                                <span class="tech-tag">AWS SageMaker</span>
+                                <span class="tech-tag">RAG</span>
+                                <span class="tech-tag">LLMs</span>
+                                <span class="tech-tag">Computer Vision</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Crystal Consultancy Experience -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <div class="company-logo">
+                                    <div class="company-initial">C</div>
+                                </div>
+                                <div class="experience-info">
+                                    <h3>Data Analyst</h3>
+                                    <h4>Crystal Consultancy Services</h4>
+                                    <p class="location"><i class="fas fa-map-marker-alt"></i> Chennai, India</p>
+                                    <p class="duration"><i class="fas fa-calendar"></i> October 2021 - September 2022</p>
+                                </div>
+                            </div>
+                            
+                            <div class="experience-description">
+                                <ul>
+                                    <li>Monitored and analyzed KPIs using SAP R3 data, resulting in 4% improvement through data-driven decisions</li>
+                                    <li>Applied Azure Databricks to optimize ETL pipeline, enhancing speed by 25%</li>
+                                    <li>Improved feature engineering and model deployment processes</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="experience-tech">
+                                <span class="tech-tag">SAP R3</span>
+                                <span class="tech-tag">Azure Databricks</span>
+                                <span class="tech-tag">ETL</span>
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Altascio Technologies Experience -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <div class="company-logo">
+                                    <div class="company-initial">A</div>
+                                </div>
+                                <div class="experience-info">
+                                    <h3>Data Engineering Intern</h3>
+                                    <h4>Altascio Technologies</h4>
+                                    <p class="location"><i class="fas fa-map-marker-alt"></i> Texas, USA (Remote)</p>
+                                    <p class="duration"><i class="fas fa-calendar"></i> February 2021 - July 2021</p>
+                                </div>
+                            </div>
+                            
+                            <div class="experience-description">
+                                <ul>
+                                    <li>Streamlined manual spreadsheet aggregation using Excel techniques, reducing report generation time by 2%</li>
+                                    <li>Optimized data extraction using SQL, saving 20 hrs/week and reducing inventory update time by 11%</li>
+                                    <li>Automated data consolidation processes for fragmented inventory systems</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="experience-tech">
+                                <span class="tech-tag">Excel VBA</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Data Consolidation</span>
+                                <span class="tech-tag">VLOOKUP</span>
+                                <span class="tech-tag">Pivot Tables</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-secondary">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Innovative solutions in AI, ML, and automotive technology</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Material Prediction GNN Project -->
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-category">Graph Neural Networks</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Material Prediction with GNNs</h3>
+                        <p>Custom GNN framework for wear prediction with synthetic dataset generation, achieving RMSE under 0.1 and supporting efficient shape generation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Graph Neural Networks</span>
+                            <span class="tech-tag">Synthetic Data</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">RMSE &lt; 0.1</span>
+                                <span class="metric-label">Accuracy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- OCR System Project -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-category">Computer Vision & NLP</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>OCR + Auto Spelling Correction</h3>
+                        <p>NLP-based automatic spelling correction system using Tesseract OCR and language modeling, creating a scalable REST API for multilingual documents.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Tesseract OCR</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">89%</span>
+                                <span class="metric-label">Accuracy Boost</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recommendation System Project -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-category">Machine Learning</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Hybrid Recommendation System</h3>
+                        <p>Advanced recommendation engine using collaborative and content filtering with clustering, integrated into a Flask web application for real-time recommendations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Collaborative Filtering</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Clustering</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">92%</span>
+                                <span class="metric-label">Accuracy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Publications & Research</h2>
+                <p class="section-subtitle">Contributing to academic knowledge and industry innovation</p>
+            </div>
+            
+            <div class="publications-content">
+                <div class="publication-item" data-aos="fade-up">
+                    <div class="publication-content">
+                        <h3>Movie Recommendation System using Hybrid Filtering</h3>
+                        <p class="publication-author">Morris Darren Babu</p>
+                        <p class="publication-description">
+                            Created a hybrid recommendation system using collaborative and content filtering with clustering, achieving 92% accuracy and integrating it into a Flask-based web app for real-time user recommendations.
+                        </p>
+                        <div class="publication-metrics">
+                            <div class="metric">
+                                <span class="metric-value">92%</span>
+                                <span class="metric-label">Accuracy</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">2022</span>
+                                <span class="metric-label">Published</span>
+                            </div>
+                        </div>
+                        <div class="publication-links">
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-file-pdf"></i>
+                                View Paper
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accomplishments">
+                    <h3 data-aos="fade-up">Research Accomplishments</h3>
+                    
+                    <div class="accomplishment-item" data-aos="fade-up">
+                        <div class="accomplishment-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="accomplishment-content">
+                            <h4>Predictive Data Analytics Nanodegree</h4>
+                            <p class="accomplishment-org">Udacity - Bertelsmann Scholarship</p>
+                            <p>Devised 25+ analytical datasets during 10-month program, utilizing statistical modeling, classification, time-series forecasting, and A/B testing to improve analytical efficiency by 17%.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accomplishment-item" data-aos="fade-up">
+                        <div class="accomplishment-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="accomplishment-content">
+                            <h4>Germany GDP Prediction Research</h4>
+                            <p class="accomplishment-org">OSS Research Group</p>
+                            <p>Employed time-series data engineering techniques in 6-month project to predict Germany's GDP from 1970 to 2022, examining inflation-GDP correlation with 85% reliability rate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section bg-secondary">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Certifications & Education</h2>
+                <p class="section-subtitle">Continuous learning and professional development</p>
+            </div>
+            
+            <div class="education-grid">
+                <div class="education-card" data-aos="fade-up">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-info">
+                            <h3>M.Sc. in Data Science</h3>
+                            <p class="education-institution">Friedrich Alexander University Erlangen-Nuremberg</p>
+                            <p class="education-period">October 2022 - Present</p>
+                            <p class="education-grade">CGPA: 2.5/4.0</p>
+                        </div>
+                    </div>
+                    <div class="education-subjects">
+                        <div class="subject-tag">Pattern Recognition</div>
+                        <div class="subject-tag">Deep Learning</div>
+                        <div class="subject-tag">Generative AI</div>
+                        <div class="subject-tag">Anomaly Detection</div>
+                        <div class="subject-tag">Reinforcement Learning</div>
+                    </div>
+                </div>
+                
+                <div class="education-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-info">
+                            <h3>B.E. in Computer Science</h3>
+                            <p class="education-institution">Rajalakshmi Institute of Technology</p>
+                            <p class="education-period">June 2018 - June 2022</p>
+                            <p class="education-grade">Graduated with Excellence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certifications-grid">
+                <div class="certification-item" data-aos="fade-up">
+                    <div class="cert-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Google Cloud Platform (GCP)</h4>
+                        <p>IT Automation with Python Specialization</p>
+                        <a href="#" class="cert-link">View Certificate</a>
+                    </div>
+                </div>
+                
+                <div class="certification-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cert-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Deep Learning AI</h4>
+                        <p>TensorFlow Developer Specialization</p>
+                        <a href="#" class="cert-link">View Certificate</a>
+                    </div>
+                </div>
+                
+                <div class="certification-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Data Engineering</h4>
+                        <p>Big Data & Machine Learning Algorithms</p>
+                        <a href="#" class="cert-link">View Certificate</a>
+                    </div>
+                </div>
+                
+                <div class="certification-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cert-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Excel to MySQL</h4>
+                        <p>Analytics & Regression Techniques</p>
+                        <a href="#" class="cert-link">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Ready to collaborate on innovative AI and automotive projects</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>morrisdarren357@gmail.com</p>
+                            <a href="mailto:morrisdarren357@gmail.com" class="contact-link">Send Email</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+49 157 81921462</p>
+                            <a href="tel:+4915781921462" class="contact-link">Call Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Nürnberg, Bavaria, Germany</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/morrisdarrenbabu" target="_blank" class="social-link linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/DARREN-2000" target="_blank" class="social-link github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:morrisdarren357@gmail.com" class="social-link email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" required></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Morris Darren Babu</h3>
+                    <p>AI/ML Research Specialist | Automotive Innovation</p>
+                    <p>&copy; 2025 Morris Darren Babu. All rights reserved.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#research">Research</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Resume/CV</a></li>
+                            <li><a href="#">Publications</a></li>
+                            <li><a href="#">Certifications</a></li>
+                            <li><a href="#">References</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/particles-config.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
