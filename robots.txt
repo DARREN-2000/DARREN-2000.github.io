@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://darren-2000.github.io/sitemap.xml
+
+# Disallow private documents
+Disallow: /documents/private/
+Disallow: /.github/
+
+# Allow important pages
+Allow: /documents/resume/
+Allow: /documents/certifications/
+Allow: /documents/publications/
