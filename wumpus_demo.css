@@ -1,0 +1,50 @@
+
+    .wumpus-demo-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    
+    .demo-content {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        max-width: 800px;
+        max-height: 80vh;
+        overflow-y: auto;
+        color: #333;
+    }
+    
+    .demo-step {
+        border: 1px solid #ddd;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 4px;
+    }
+    
+    .sensor-data, .belief-state, .predictions, .metrics {
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+    }
+    
+    .close-demo {
+        background: #4ECDC4;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+    
+    .close-demo:hover {
+        background: #45B7AA;
+    }
+    

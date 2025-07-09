@@ -1,0 +1,8 @@
+{
+  "tracker_only": {
+    "environment": "tracker_only",
+    "avg_score": 0.46185074517339375,
+    "std_score": 0.13915874505588996,
+    "avg_time": 0.012637853622436523,
+    "target_score": 0.65,
+    "passes_target": 

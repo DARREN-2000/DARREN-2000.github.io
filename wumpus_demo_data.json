@@ -1,0 +1,249 @@
+{
+  "title": "Wumpus Hunter - Advanced HMM Implementation",
+  "description": "Real-time demonstration of probabilistic tracking using Hidden Markov Models",
+  "steps": [
+    {
+      "timestep": 1,
+      "sensor_input": {
+        "gps": [
+          2,
+          2
+        ],
+        "microphone": 0.4
+      },
+      "belief_state": {
+        "most_likely_position": [
+          2,
+          1
+        ],
+        "confidence": 0.087,
+        "should_take_action": false
+      },
+      "predictions": [
+        {
+          "position": [
+            2,
+            2
+          ],
+          "confidence": 0.054
+        },
+        {
+          "position": [
+            1,
+            0
+          ],
+          "confidence": 0.045
+        }
+      ],
+      "metrics": {
+        "computation_time": 0.75,
+        "adaptive_threshold": 0.3
+      }
+    },
+    {
+      "timestep": 2,
+      "sensor_input": {
+        "gps": [
+          2,
+          3
+        ],
+        "microphone": 0.5
+      },
+      "belief_state": {
+        "most_likely_position": [
+          1,
+          3
+        ],
+        "confidence": 0.13,
+        "should_take_action": false
+      },
+      "predictions": [
+        {
+          "position": [
+            1,
+            3
+          ],
+          "confidence": 0.061
+        },
+        {
+          "position": [
+            1,
+            5
+          ],
+          "confidence": 0.065
+        }
+      ],
+      "metrics": {
+        "computation_time": 0.7,
+        "adaptive_threshold": 0.3
+      }
+    },
+    {
+      "timestep": 3,
+      "sensor_input": {
+        "gps": [
+          3,
+          3
+        ],
+        "microphone": 0.6
+      },
+      "belief_state": {
+        "most_likely_position": [
+          1,
+          3
+        ],
+        "confidence": 0.101,
+        "should_take_action": false
+      },
+      "predictions": [
+        {
+          "position": [
+            1,
+            4
+          ],
+          "confidence": 0.065
+        },
+        {
+          "position": [
+            1,
+            5
+          ],
+          "confidence": 0.065
+        }
+      ],
+      "metrics": {
+        "computation_time": 0.7,
+        "adaptive_threshold": 0.3
+      }
+    },
+    {
+      "timestep": 4,
+      "sensor_input": {
+        "gps": [
+          3,
+          4
+        ],
+        "microphone": 0.7
+      },
+      "belief_state": {
+        "most_likely_position": [
+          3,
+          4
+        ],
+        "confidence": 0.153,
+        "should_take_action": false
+      },
+      "predictions": [
+        {
+          "position": [
+            4,
+            4
+          ],
+          "confidence": 0.097
+        },
+        {
+          "position": [
+            5,
+            4
+          ],
+          "confidence": 0.081
+        }
+      ],
+      "metrics": {
+        "computation_time": 0.68,
+        "adaptive_threshold": 0.3
+      }
+    },
+    {
+      "timestep": 5,
+      "sensor_input": {
+        "gps": [
+          4,
+          4
+        ],
+        "microphone": 0.8
+      },
+      "belief_state": {
+        "most_likely_position": [
+          4,
+          4
+        ],
+        "confidence": 0.262,
+        "should_take_action": false
+      },
+      "predictions": [
+        {
+          "position": [
+            5,
+            4
+          ],
+          "confidence": 0.157
+        },
+        {
+          "position": [
+            5,
+            3
+          ],
+          "confidence": 0.097
+        }
+      ],
+      "metrics": {
+        "computation_time": 0.69,
+        "adaptive_threshold": 0.3
+      }
+    },
+    {
+      "timestep": 6,
+      "sensor_input": {
+        "gps": [
+          4,
+          5
+        ],
+        "microphone": 0.75
+      },
+      "belief_state": {
+        "most_likely_position": [
+          4,
+          4
+        ],
+        "confidence": 0.247,
+        "should_take_action": false
+      },
+      "predictions": [
+        {
+          "position": [
+            5,
+            4
+          ],
+          "confidence": 0.139
+        },
+        {
+          "position": [
+            5,
+            5
+          ],
+          "confidence": 0.102
+        }
+      ],
+      "metrics": {
+        "computation_time": 0.78,
+        "adaptive_threshold": 0.3
+      }
+    }
+  ],
+  "summary": {
+    "final_confidence": 0.24738482271724427,
+    "total_steps": 6,
+    "average_computation_time": 0.72,
+    "performance_metrics": {
+      "sensor_fusion_weights": {
+        "gps": 0.6,
+        "microphone": 0.4
+      },
+      "cache_efficiency": {
+        "transition": 0,
+        "sensor": 12
+      }
+    }
+  }
+}
