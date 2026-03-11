@@ -175,19 +175,37 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitButton.disabled = true;
             
+            // Build mailto link as fallback
+            const name = formData.get('name') || '';
+            const email = formData.get('email') || '';
+            const subject = formData.get('subject') || '';
+            const message = formData.get('message') || '';
+            const mailtoBody = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+            const mailtoLink = `mailto:morrisdarren357@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(mailtoBody)}`;
+            
             try {
-                // Simulate form submission (replace with actual endpoint)
-                await new Promise(resolve => setTimeout(resolve, 2000));
+                // Try Formspree submission
+                const response = await fetch('https://formspree.io/f/morrisdarren357@gmail.com', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
                 
-                // Success state
-                submitButton.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                submitButton.style.background = 'var(--success-color)';
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Show success message
-                showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+                if (response.ok) {
+                    // Success state
+                    submitButton.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                    submitButton.style.background = 'var(--success-color)';
+                    contactForm.reset();
+                    showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+                } else {
+                    // Fallback to mailto
+                    window.location.href = mailtoLink;
+                    submitButton.innerHTML = '<i class="fas fa-check"></i> Opening Email Client...';
+                    submitButton.style.background = 'var(--success-color)';
+                    showNotification('Opening your email client to send the message.', 'success');
+                }
                 
                 // Reset button after 3 seconds
                 setTimeout(() => {
@@ -197,11 +215,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 3000);
                 
             } catch (error) {
-                // Error state
-                submitButton.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error';
-                submitButton.style.background = 'var(--secondary-color)';
+                // Fallback to mailto on error
+                window.location.href = mailtoLink;
+                submitButton.innerHTML = '<i class="fas fa-check"></i> Opening Email Client...';
+                submitButton.style.background = 'var(--success-color)';
                 
-                showNotification('Error sending message. Please try again.', 'error');
+                showNotification('Opening your email client to send the message.', 'success');
                 
                 // Reset button after 3 seconds
                 setTimeout(() => {
