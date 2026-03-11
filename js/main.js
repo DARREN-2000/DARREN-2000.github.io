@@ -113,11 +113,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('typed-text')) {
         new Typed('#typed-text', {
             strings: [
-                'AI/ML Research Specialist',
-                'Automotive AI Expert',
+                'AI/Data Specialist',
+                'MLOps Engineer @ Deutsche Telekom',
+                'LLM Infrastructure Expert',
+                'Automotive AI Researcher',
                 'Data Science Innovator',
-                'Machine Learning Engineer',
-                'Deep Learning Researcher'
+                'GenAI & LLMOps Specialist'
             ],
             typeSpeed: 50,
             backSpeed: 30,
