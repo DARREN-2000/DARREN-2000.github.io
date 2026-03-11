@@ -1232,6 +1232,52 @@ body {
     text-decoration: underline;
 }
 
+/* Languages Section */
+.languages-section {
+    margin-top: 3rem;
+}
+
+.languages-title {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.language-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    border: 1px solid rgba(78, 205, 196, 0.2);
+    transition: var(--transition);
+}
+
+.language-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.language-name {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.language-level {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
 /* Contact Section */
 .contact-content {
     display: grid;
