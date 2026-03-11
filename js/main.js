@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Contact form
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', async (e) => {
+        contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
             const formData = new FormData(contactForm);
@@ -175,60 +175,29 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitButton.disabled = true;
             
-            // Build mailto link as fallback
+            // Build mailto link
             const name = formData.get('name') || '';
             const email = formData.get('email') || '';
-            const subject = formData.get('subject') || '';
+            const subject = formData.get('subject') || 'Portfolio Contact';
             const message = formData.get('message') || '';
             const mailtoBody = `Name: ${name}\nEmail: ${email}\n\n${message}`;
             const mailtoLink = `mailto:morrisdarren357@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(mailtoBody)}`;
             
-            try {
-                // Try Formspree submission
-                const response = await fetch('https://formspree.io/f/morrisdarren357@gmail.com', {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-                
-                if (response.ok) {
-                    // Success state
-                    submitButton.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                    submitButton.style.background = 'var(--success-color)';
-                    contactForm.reset();
-                    showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-                } else {
-                    // Fallback to mailto
-                    window.location.href = mailtoLink;
-                    submitButton.innerHTML = '<i class="fas fa-check"></i> Opening Email Client...';
-                    submitButton.style.background = 'var(--success-color)';
-                    showNotification('Opening your email client to send the message.', 'success');
-                }
-                
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    submitButton.innerHTML = originalText;
-                    submitButton.disabled = false;
-                    submitButton.style.background = '';
-                }, 3000);
-                
-            } catch (error) {
-                // Fallback to mailto on error
-                window.location.href = mailtoLink;
-                submitButton.innerHTML = '<i class="fas fa-check"></i> Opening Email Client...';
-                submitButton.style.background = 'var(--success-color)';
-                
-                showNotification('Opening your email client to send the message.', 'success');
-                
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    submitButton.innerHTML = originalText;
-                    submitButton.disabled = false;
-                    submitButton.style.background = '';
-                }, 3000);
-            }
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Success state
+            submitButton.innerHTML = '<i class="fas fa-check"></i> Opening Email Client...';
+            submitButton.style.background = 'var(--success-color)';
+            showNotification('Opening your email client to send the message.', 'success');
+            contactForm.reset();
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+                submitButton.style.background = '';
+            }, 3000);
         });
     }
 
