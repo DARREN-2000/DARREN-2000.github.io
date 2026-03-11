@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Contact form
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', async (e) => {
+        contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
             const formData = new FormData(contactForm);
@@ -175,41 +175,29 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitButton.disabled = true;
             
-            try {
-                // Simulate form submission (replace with actual endpoint)
-                await new Promise(resolve => setTimeout(resolve, 2000));
-                
-                // Success state
-                submitButton.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                submitButton.style.background = 'var(--success-color)';
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Show success message
-                showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-                
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    submitButton.innerHTML = originalText;
-                    submitButton.disabled = false;
-                    submitButton.style.background = '';
-                }, 3000);
-                
-            } catch (error) {
-                // Error state
-                submitButton.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error';
-                submitButton.style.background = 'var(--secondary-color)';
-                
-                showNotification('Error sending message. Please try again.', 'error');
-                
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    submitButton.innerHTML = originalText;
-                    submitButton.disabled = false;
-                    submitButton.style.background = '';
-                }, 3000);
-            }
+            // Build mailto link
+            const name = formData.get('name') || '';
+            const email = formData.get('email') || '';
+            const subject = formData.get('subject') || 'Portfolio Contact';
+            const message = formData.get('message') || '';
+            const mailtoBody = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+            const mailtoLink = `mailto:morrisdarren357@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(mailtoBody)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Success state
+            submitButton.innerHTML = '<i class="fas fa-check"></i> Opening Email Client...';
+            submitButton.style.background = 'var(--success-color)';
+            showNotification('Opening your email client to send the message.', 'success');
+            contactForm.reset();
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+                submitButton.style.background = '';
+            }, 3000);
         });
     }
 
