@@ -932,6 +932,12 @@ body {
     justify-content: center;
 }
 
+.project-icon {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+}
+
 .project-overlay {
     position: absolute;
     top: 0;
@@ -984,6 +990,10 @@ body {
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    z-index: 2;
 }
 
 .project-content {
