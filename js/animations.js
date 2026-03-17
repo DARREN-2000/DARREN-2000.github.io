@@ -158,18 +158,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Metrics animation
     gsap.utils.toArray('.metric').forEach((metric, index) => {
-        gsap.from(metric, {
-            opacity: 0,
-            scale: 0,
-            duration: 0.6,
-            delay: index * 0.1,
-            ease: 'back.out(1.7)',
-            scrollTrigger: {
-                trigger: metric.closest('.impact-metrics, .publication-metrics'),
-                start: 'top 80%',
-                toggleActions: 'play none none reverse'
-            }
-        });
+        const triggerParent = metric.closest('.impact-metrics, .publication-metrics, .project-metrics');
+        if (triggerParent) {
+            gsap.from(metric, {
+                opacity: 0,
+                scale: 0,
+                duration: 0.6,
+                delay: index * 0.1,
+                ease: 'back.out(1.7)',
+                scrollTrigger: {
+                    trigger: triggerParent,
+                    start: 'top 80%',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+        }
     });
 
     // Contact form animations
@@ -198,6 +201,102 @@ document.addEventListener('DOMContentLoaded', function() {
             ease: 'power3.out',
             scrollTrigger: {
                 trigger: item.closest('.certifications-grid'),
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    });
+
+    // Publication items animation
+    gsap.utils.toArray('.publication-item').forEach((item, index) => {
+        gsap.from(item, {
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            delay: index * 0.2,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: item,
+                start: 'top 85%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    });
+
+    // Accomplishment items animation
+    gsap.utils.toArray('.accomplishment-item').forEach((item, index) => {
+        gsap.from(item, {
+            opacity: 0,
+            x: -60,
+            duration: 0.6,
+            delay: index * 0.15,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: item.closest('.accomplishments'),
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    });
+
+    // Education cards animation
+    gsap.utils.toArray('.education-card').forEach((card, index) => {
+        gsap.from(card, {
+            opacity: 0,
+            y: 60,
+            duration: 0.8,
+            delay: index * 0.2,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: card.closest('.education-grid'),
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    });
+
+    // Languages section animation
+    const languagesSection = document.querySelector('.languages-section');
+    if (languagesSection) {
+        gsap.from(languagesSection, {
+            opacity: 0,
+            y: 40,
+            duration: 0.8,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: languagesSection,
+                start: 'top 85%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    }
+
+    // Language items animation
+    gsap.utils.toArray('.language-item').forEach((item, index) => {
+        gsap.from(item, {
+            opacity: 0,
+            scale: 0.8,
+            duration: 0.5,
+            delay: index * 0.1,
+            ease: 'back.out(1.7)',
+            scrollTrigger: {
+                trigger: item.closest('.languages-grid'),
+                start: 'top 85%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    });
+
+    // Contact info items animation
+    gsap.utils.toArray('.contact-item').forEach((item, index) => {
+        gsap.from(item, {
+            opacity: 0,
+            x: -40,
+            duration: 0.6,
+            delay: index * 0.15,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: item.closest('.contact-info'),
                 start: 'top 80%',
                 toggleActions: 'play none none reverse'
             }
