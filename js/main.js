@@ -1,13 +1,5 @@
 // Main JavaScript functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AOS (Animate On Scroll)
-    AOS.init({
-        duration: 1000,
-        offset: 100,
-        once: true,
-        easing: 'ease-out-cubic'
-    });
-
     // Initialize particles
     if (window.particlesJS) {
         particlesJS('particles-js', particlesConfig);
